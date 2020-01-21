@@ -40,10 +40,10 @@ public class QueryProcessor {
             return Integer.toString(result);
         }
 
-        if (query.toLowerCase().contains("plus")) {
-            String q1 = query.substring(query.indexOf("s+")+1);
-            return q1.substring(0, q1.indexOf("%")) + q1.substring(q1.indexOf("s+")+4);
-        }
+//        if (query.toLowerCase().contains("plus")) {
+//            String q1 = query.substring(query.indexOf("s+")+1);
+//            return q1.substring(0, q1.indexOf("%")) + q1.substring(q1.indexOf("s+")+4);
+//        }
 
         if (query.toLowerCase().contains("eiffel tower in")) {
             return "paris";
@@ -51,6 +51,14 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("what colour is a banana")) {
             return "yellow";
+        }
+
+        if (query.toLowerCase().contains("james bond")) {
+            return "sean connery";
+        }
+
+        if (query.toLowerCase().contains("fibonnaci sequence")) {
+
         }
 
 
