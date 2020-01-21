@@ -7,6 +7,13 @@ import java.util.List;
 
 public class QueryProcessor {
 
+    static int fib(int n)
+    {
+        if (n <= 1)
+            return n;
+        return fib(n-1) + fib(n-2);
+    }
+
     public String process(String query) {
         if (query.toLowerCase().contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
@@ -58,7 +65,10 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("fibonnaci sequence")) {
+            int n = Integer.parseInt(query.substring(query.indexOf("what is the")+12, query.indexOf("th number")));
+            int fib_num = fib(n);
 
+            return Integer.toString(fib_num);
         }
 
 
