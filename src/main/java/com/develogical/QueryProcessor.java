@@ -64,7 +64,7 @@ public class QueryProcessor {
             return "sean connery";
         }
 
-        if (query.toLowerCase().contains("fibonnaci sequence")) {
+        if (query.toLowerCase().contains("fibonacci sequence")) {
             int n = Integer.parseInt(query.substring(query.indexOf("what is the")+12, query.indexOf("th number")));
             int fib_num = fib(n);
 
