@@ -1,5 +1,10 @@
 package com.develogical;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -14,7 +19,25 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("is the largest")) {
-            return query;
+            String numbers_string = query.substring(query.indexOf("largest:")+9);
+
+            List<String> numbers = Arrays.asList(numbers_string.split(", "));
+
+            List<Integer> numbersInt = new ArrayList<>();
+            for (String number : numbers) {
+                numbersInt.add(Integer.valueOf(number));
+            }
+
+            List<Integer> sortedlist = new ArrayList<>(numbersInt);
+
+            // sort list in natural order
+            Collections.sort(sortedlist);
+
+            // last element in the sorted list
+            // would be maximum
+            int result = sortedlist.get(sortedlist.size() - 1);
+
+            return Integer.toString(result);
         }
 
         if (query.toLowerCase().contains("plus")) {
@@ -24,6 +47,10 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("eiffel tower in")) {
             return "Paris";
+        }
+
+        if (query.toLowerCase().contains("what colour is a banana")) {
+            return "Yellow";
         }
 
 
