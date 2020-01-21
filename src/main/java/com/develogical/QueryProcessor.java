@@ -46,11 +46,11 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("eiffel tower in")) {
-            return "Paris";
+            return "paris";
         }
 
         if (query.toLowerCase().contains("what colour is a banana")) {
-            return "Yellow";
+            return "yellow";
         }
 
 
