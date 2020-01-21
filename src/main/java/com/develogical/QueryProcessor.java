@@ -16,6 +16,13 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("is the largest")) {
             return query;
         }
+
+        if (query.toLowerCase().contains("plus")) {
+            String q1 = query.substring(query.indexOf("s+")+1);
+            return q1.substring(0, q1.indexOf("%")) + q1.substring(q1.indexOf("s+")+4);
+        }
+
+
         return "";
     }
 }
