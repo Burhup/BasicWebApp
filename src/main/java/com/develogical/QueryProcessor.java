@@ -22,7 +22,7 @@ public class QueryProcessor {
             return q1.substring(0, q1.indexOf("%")) + q1.substring(q1.indexOf("s+")+4);
         }
 
-        if (query.toLowerCase().contains("Eiffel tower in")) {
+        if (query.toLowerCase().contains("eiffel tower in")) {
             return "Paris";
         }
 
