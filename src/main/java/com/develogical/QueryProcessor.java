@@ -12,6 +12,10 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("team name")) {
             return "Little Fuus";
         }
+
+        if (query.toLowerCase().contains("is the largest")) {
+            return query;
+        }
         return "";
     }
 }
